@@ -41,16 +41,14 @@
 
 struct ip64_dhcpc_state;
 
-void
-cetic_6lbr_ip64_init(void);
+// Define the variable in one source file
+extern const struct ip64_dhcpc_state *cetic_6lbr_ip64_dhcp_state;
 
-void
-cetic_6lbr_ip64_dhcpc_configured(const struct ip64_dhcpc_state *s);
+void cetic_6lbr_ip64_init(void);
+void cetic_6lbr_ip64_dhcpc_configured(const struct ip64_dhcpc_state *s);
 
 extern uip_ip4addr_t eth_ip64_addr;
 extern uip_ip4addr_t eth_ip64_netmask;
 extern uip_ip4addr_t eth_ip64_gateway;
-
-const struct ip64_dhcpc_state *cetic_6lbr_ip64_dhcp_state;
 
 #endif
